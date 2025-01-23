@@ -25,7 +25,6 @@ app.use('/firm',firmRoutes);
 app.use('/product', productRoutes);
 app.use('/uploads', express.static('uploads'));
 
-
 app.listen(PORT,()=>{
     console.log(`server started and running at ${PORT}`);
 });

@@ -1,6 +1,5 @@
 
 const mongoose = require("mongoose");
-
 const vendorSchema = new mongoose.Schema({
     username:{
         type:String,
