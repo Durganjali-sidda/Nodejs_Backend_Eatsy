@@ -22,7 +22,6 @@ const addFirm = async(req, res) => {
         const image = req.file ? req.file.filename : undefined;
 
         const vendor = await Vendor.findById(req.vendorId);
-
         if (!vendor) {
             res.status(404).json({ message: "Vendor not found" })
         }
@@ -49,6 +48,9 @@ const addFirm = async(req, res) => {
         vendor.firm.push(savedFirm)
 
         await vendor.save()
+
+
+
         return res.status(200).json({ message: 'Firm Added successfully ', firmId, vendorFirmName });
 
 

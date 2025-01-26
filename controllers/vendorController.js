@@ -85,4 +85,3 @@ const getVendorById = async(req, res) => {
 
 
 module.exports = { vendorRegister, vendorLogin, getAllVendors, getVendorById }
-

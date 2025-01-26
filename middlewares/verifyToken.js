@@ -6,11 +6,12 @@ dotEnv.config()
 
 const secretKey = process.env.WhatIsYourName
 
+
 const verifyToken = async(req, res, next) => {
     const token = req.headers.token;
 
     if (!token) {
-        return res.status(401).json({ error: "Token is not provided" });
+        return res.status(401).json({ error: "Token is required" });
     }
     try {
         const decoded = jwt.verify(token, secretKey)
